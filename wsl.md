@@ -7,3 +7,5 @@
     wsl.exe -u root
     sudo usermod -l newUsername oldUsername
     sudo usermod -d /home/newHomeDir -m newUsername
+
+> But honestly, you're better off reinstalling the distro, it would prevent permissions issues.

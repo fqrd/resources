@@ -1,14 +1,18 @@
 #### SSH
-ssh-keygen -t rsa -b 4096
-Name: path/to/.ssh/id_rsa_github
 
-> check SHA256 publickey
+    ssh-keygen -t rsa -b 4096
 
-ssh-keygen -lf path/to/.ssh/id_rsa_github.pub
+> Custom name: ~/.ssh/id_rsa_example
 
-> /.ssh/config (NOT ".config")
+#### Check SHA256 publickey
+
+    ssh-keygen -lf ~/.ssh/id_rsa_example.pub
+
+#### Custom key name configuration
+
+> touch ~/.ssh/config (NOT ".config")
 
     Host github.com
         User git
         Hostname github.com
-        IdentityFile path/to/.ssh/id_rsa_github
+        IdentityFile ~/.ssh/id_rsa_example
