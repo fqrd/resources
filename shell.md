@@ -1,22 +1,35 @@
-`
-	# !/bin/sh
-`
+.sh file shebang
 
-`
+	# !/bin/sh
+
+### Variables
+
+Assign content of `cat` to a variable
+
 	export str=$(cat ./file)
 	echo "$str"
-`
 
-`
+### Counters
+
+`-m` (number of chars)
+
+
 	cat ./file | wc -m
-	cat ./file | wc -l
-	cat ./file | wc -w
-	cat ./file | wc -c
-	cat ./file | wc -L
-`
 
--m (number of chars)
--l (number of lines)
--w (number of words)
--c (number of bytes)
--L (length of longest line)
+
+`-l`   (number of lines)
+
+	cat ./file | wc -l
+
+`-w`   (number of words)
+
+	cat ./file | wc -w
+
+`-c`   (number of bytes)
+
+	cat ./file | wc -c
+
+`-L`   (length of longest line)
+
+	cat ./file | wc -L
+
