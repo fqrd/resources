@@ -16,3 +16,11 @@
         User git
         Hostname github.com
         IdentityFile ~/.ssh/id_rsa_example
+
+### Submodules
+
+    git clone git@github.com:fqrd/_libft.git --recursive
+
+> if forgot the recursive, once cloned use
+
+    git submodule update --init
