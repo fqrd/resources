@@ -17,6 +17,8 @@ Chose a good password then:
 
 Read the QR code from a reliable source (try different ones and see if the outputs are different).
 
+- https://zxing.org/w/decode.jspx
+
 Save the seed/output in a file called `output.txt.gpg.b64`
 
 	cat output.txt.gpg.b64 | base64 --decode | gpg -d
