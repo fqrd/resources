@@ -19,6 +19,8 @@ Read the QR code from a reliable source (try different ones and see if the outpu
 
 - https://zxing.org/w/decode.jspx
 
+- Qtqr and Zbar output's are too long somehow.
+
 Save the seed/output in a file called `output.txt.gpg.b64`
 
 (make sure the file is in simple UTF8 - without BOM)
