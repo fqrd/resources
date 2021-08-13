@@ -21,6 +21,8 @@ Read the QR code from a reliable source (try different ones and see if the outpu
 
 Save the seed/output in a file called `output.txt.gpg.b64`
 
+(make sure the file is in simple UTF8 - without BOM)
+
 	cat output.txt.gpg.b64 | base64 --decode | gpg -d
 
 Key in the password.
