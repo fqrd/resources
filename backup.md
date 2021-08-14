@@ -37,5 +37,4 @@ Key in the password.
 
 You should now see the "TEXT_TO_BACKUP" in clear.
 
-(beware some intputs like "x511" might be read as hexadecimal and confuse gpg -d)
 (don't forget the `--raw` flag, otherwise zbarimg's output would start with "QR-Code:" which `base64 --decode` won't understand)
