@@ -6,11 +6,11 @@
 
 Chose a good password then:
 
-	echo "TEXT_TO_BACKUP" | gpg --symmetric  --cipher-algo AES256 | base64 > seed.txt.gpg.b64
+	echo "SECRET" | gpg --symmetric  --cipher-algo AES256 | base64 > secret.txt
 
     sudo apt install qrencode
 
-    qrencode --output=qr.png "$(cat seed.txt.gpg.b64)"
+    qrencode --output=qr.png "$(cat secret.txt)"
 
 (if you have troubles creating .png, `sudo apt-get install libpng-dev`)
 
@@ -21,7 +21,7 @@ Chose a good password then:
     history -c
     rm ~/.bash_history
 
-## Decode
+## Decode from a file
 
     sudo apt-get install zbar-tools
 
@@ -29,16 +29,21 @@ Chose a good password then:
 
 Key in your password. (copy/paste to avoid the timeout)
 
-You should now see the "TEXT_TO_BACKUP" in clear.
+You should now see the "SECRET" in clear.
 
 (don't forget the `--raw` flag, otherwise zbarimg's output would start with "QR-Code:" which `base64 --decode` won't understand)
 
-## Another way to decode QR Code from a file
+OR
 
-- https://zxing.org/w/decode.jspx
+1. Go to [zxing.org](https://zxing.org/w/decode.jspx) and upload the desired file.
 
-## Decode from Webcam
+2. Copy/paste the output in a file called `output.txt` and execute the following command.
+
+    cat output.txt | base64 --decode | gpg -d
+3. Key in your password. Done.
+
+## Read from a Camera/Webcam
 
     sudo apt install qtqr
 
-Once installed plug-in your camera, launch the program and select "Decode from Webcam" (be sure to remain steady).
+Once installed plug-in your camera, launch the program and select "Decode from Webcam" (be sure to remain steady). To decode the output, follow along from step 2 above.
