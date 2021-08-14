@@ -8,9 +8,9 @@ Chose a good password then:
 
 	echo "SECRET" | gpg --symmetric  --cipher-algo AES256 | base64 > secret.txt
 
-    sudo apt install qrencode
+	sudo apt install qrencode
 
-    qrencode --output=qr.png "$(cat secret.txt)"
+	qrencode --output=qr.png "$(cat secret.txt)"
 
 (if you have troubles creating .png, `sudo apt-get install libpng-dev`)
 
@@ -18,14 +18,14 @@ Chose a good password then:
 
 (Your secret could be readable in ~/.bash_history)
 
-    history -c
-    rm ~/.bash_history
+	history -c
+	rm ~/.bash_history
 
 ## Decode from a file
 
-    sudo apt-get install zbar-tools
+	sudo apt-get install zbar-tools
 
-    zbarimg --raw qr.png | base64 --decode | gpg -d
+	zbarimg --raw qr.png | base64 --decode | gpg -d
 
 Key in your password. (copy/paste to avoid the timeout)
 
@@ -44,6 +44,6 @@ OR
 
 ## Read from a Camera/Webcam
 
-    sudo apt install qtqr
+	sudo apt install qtqr
 
 Once installed plug-in your camera, launch the program and select "Decode from Webcam" (be sure to remain steady). To decode the output, follow along from step 2 above.
