@@ -1,3 +1,5 @@
+# Linux (Ubuntu 20.04LTS)
+
 ## Encode
 
 	sudo apt install gpg
@@ -31,7 +33,7 @@ You should now see the "TEXT_TO_BACKUP" in clear.
 
 (don't forget the `--raw` flag, otherwise zbarimg's output would start with "QR-Code:" which `base64 --decode` won't understand)
 
-## Another way to decode QR Code From file
+## Another way to decode QR Code from a file
 
 - https://zxing.org/w/decode.jspx
 
