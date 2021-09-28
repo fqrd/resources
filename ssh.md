@@ -1,29 +1,58 @@
-// creates a new screen session in which you can work
+## Ports
 
-`
-screen 
-`
+### Change port number
 
-// exits the current screen
+    sudo nano /etc/ssh/sshd_config
+    Port 1222
 
-`
-CTRL+A D
-`
+(anything above 1024(?) lower are system reserved)
 
-// displays the pid (2040.pts-0.ubuntu) of previous screens
+### Update firewall (ufw)
 
-`
-screen -r
-`
+    sudo ufw default deny incoming
+    sudo ufw default allow outgoing
+    sudo ufw allow 549/tcp comment 'SSH'
+    sudo ufw allow http
+    sudo ufw allow https
+    sudo ufw enable
 
-// return to a previous screen
+    sudo ufw status
 
-`
-	screen -r 2040.pts-0.ubuntu
-`
+	sudo ufw reload
 
-// kill a screen
 
-`
-CTRL+D
-`
+## Screens
+
+### Creates a new screen session in which you can work
+
+    screen 
+
+### Exits the current screen
+
+    CTRL+A D
+
+### Returns to the previous screen (OR) displays the pid (2040.pts-0.ubuntu) if multiple screen opened
+
+    screen -r
+
+### Display screen list (like above in case of multiple screens)
+
+    screen -ls
+
+### Return to a selected screen
+
+    screen -r 2040.pts-0.ubuntu
+
+### Name a screen
+
+    CTRL+A A
+	:sessionname name_you_want
+
+### Rename a screen
+
+    CTR+A :
+    sessionname name_you_want
+
+### Kill a screen
+
+    CTRL+D

@@ -15,3 +15,5 @@ add this to the end of ~/.bashrc (then restart terminal)
 Cut the error sound directly in windows
 
 https://superuser.com/questions/1331064/how-do-i-stop-the-linux-terminal-in-windows-from-making-the-error-sound
+
+
