@@ -1,4 +1,8 @@
-## Ports
+# SCP (download file over SSH)
+
+    scp -P <port> <username>@<serverip>:/<source> /<destination>
+
+# Ports
 
 ### Change port number
 
@@ -21,7 +25,7 @@
 	sudo ufw reload
 
 
-## Screens
+# Screens
 
 ### Creates a new screen session in which you can work
 
@@ -43,15 +47,19 @@
 
     screen -r 2040.pts-0.ubuntu
 
+OR
+
+	screen -r <screenname>
+
 ### Name a screen
 
     CTRL+A A
-	:sessionname name_you_want
+	:sessionname <screenname>
 
-### Rename a screen
+### Rename a screen (Works best)
 
     CTR+A :
-    sessionname name_you_want
+    sessionname <screenname>
 
 ### Kill a screen
 
